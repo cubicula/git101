@@ -4,8 +4,11 @@
 Notice it doesn't delete the commits of that branch, just the pointer.
 
 See changes between workspace and staging area.
-[tentative]
+
+(tentative)
 `git diff`
-... for a specific file
+
+... for a specific file only
+
 `git diff <filename>`
 
