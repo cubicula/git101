@@ -32,3 +32,10 @@ Notice it doesn't delete the commits of that branch, just the pointer.
 
 #### Difference between staging area and <???>
 `git diff --staged`
+
+## Committing
+#### Commit with adding all files
+
+to-do: Is it really all files?
+
+`git commit -a -m "<commit message>"`
