@@ -7,6 +7,8 @@
 
 `git pull origin master` # ???
 
+to-do: What about `git clone`?
+
 `git push -u origin master`
 
 #### Delete a branch
@@ -27,3 +29,6 @@ Notice it doesn't delete the commits of that branch, just the pointer.
 `git diff <local branch> <remote>/<remote branch>`
 
 `git diff master origin/master`
+
+#### Difference between staging area and <???>
+`git diff --staged`
