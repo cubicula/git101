@@ -30,8 +30,13 @@ Notice it doesn't delete the commits of that branch, just the pointer.
 
 `git diff master origin/master`
 
+#### Difference between working area and repository
+`git diff`
+
 #### Difference between staging area and <???>
 `git diff --staged`
+
+Explained here: http://365git.tumblr.com/post/3464927214/getting-a-diff-between-the-working-tree-and-other
 
 ## Committing
 #### Commit with adding all files
@@ -39,3 +44,4 @@ Notice it doesn't delete the commits of that branch, just the pointer.
 to-do: Is it really all files?
 
 `git commit -a -m "<commit message>"`
+
