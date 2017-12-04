@@ -52,10 +52,11 @@ to-do: Is it really all files?
 Idea - run diff before and after each step to verify it's doing the expected thing
 
 ---
+##### working-repo
 `git diff HEAD` ... is working area different from repo? Run this at the end of the sequence to see nothing is returned and they are in sync.
 
 ---
-
+##### working-staging
 `git status`
 
 `git diff` ... between working and staging, this is to see whether staging has the stuff from working area that we want to commit
@@ -65,7 +66,7 @@ Idea - run diff before and after each step to verify it's doing the expected thi
 `git diff` ... must show nothing, so we know staging has the stuff we want to commit
 
 ---
-
+##### staging-repo
 !! Careful - if a file has not been added to the staging area, diff will sho nothing, giving the impression working and staging are in sync even though there's a whole file missing
 
 `git diff --staged` ... between staging and repo branch
@@ -77,6 +78,7 @@ Idea - run diff before and after each step to verify it's doing the expected thi
 `git diff HEAD` ... must show nothing, so we know working is in sync with repo
 
 ---
+##### local-remote
 
 `git diff origin/master` ... between working(??? or staging or local repo???) and remote repo, to see what hasn't been pushed to remote
 
