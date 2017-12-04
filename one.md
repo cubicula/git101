@@ -48,3 +48,35 @@ to-do: Is it really all files?
 
 `git commit -a -m "<commit message>"`
 
+### Committing sequence with checking
+Idea - run diff before and after each step to verify it's doing the expected thing
+
+---
+
+`git status`
+
+`git diff` ... between working and staging, this is to see whether staging has the stuff from working area that we want to commit
+
+`git add <file_to_track>`
+
+`git diff` ... must show nothing, so we know staging has the stuff we want to commit
+
+---
+
+!! Careful - if a file has not been added to the staging area, diff will sho nothing, giving the impression working and staging are in sync even though there's a whole file missing
+
+`git diff --staged` ... between staging and repo branch
+
+`git commit -m "<message>"`
+
+`git diff --staged` ... must show nothing, so we know staging has been committed to repo
+
+---
+
+`git diff origin/master` ... between working(??? or staging or local repo???) and remote repo, to see what hasn't been pushed to remote
+
+`git push origin master`
+
+`git diff origin/master` ... must show nothing, so we know remote is synced with local
+
+---
