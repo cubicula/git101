@@ -52,6 +52,8 @@ to-do: Is it really all files?
 Idea - run diff before and after each step to verify it's doing the expected thing
 
 ---
+`git diff HEAD` ... is working area different from repo? Run this at the end of the sequence to see nothing is returned and they are in sync.
+---
 
 `git status`
 
@@ -70,6 +72,8 @@ Idea - run diff before and after each step to verify it's doing the expected thi
 `git commit -m "<message>"`
 
 `git diff --staged` ... must show nothing, so we know staging has been committed to repo
+
+`git diff HEAD` ... must show nothing, so we know working is in sync with repo
 
 ---
 
