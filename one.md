@@ -48,11 +48,12 @@ to-do: Is it really all files?
 
 `git commit -a -m "<commit message>"`
 
-### Committing sequence with checking
+### A commit sequence with checking
 Idea - run diff before and after each step to verify it's doing the expected thing
 
 ---
 `git diff HEAD` ... is working area different from repo? Run this at the end of the sequence to see nothing is returned and they are in sync.
+
 ---
 
 `git status`
