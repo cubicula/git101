@@ -100,3 +100,8 @@ Go back to the last checked-in version of a single file
 
 _(not sure what it does in the staging area)_
 
+## Overwrite local files with last commit
+## Recover  deleted local file
+## Show files which changed
+`git diff --name-only`
+
