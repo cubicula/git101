@@ -144,6 +144,17 @@ There's a huge difference between `git reset <file>` and `git reset <ref>` !
 
 Well, maybe not that much. Defaults to HEAD.
 
+Ok, little more understanding of the staging area:
+* it has the exact copy of the repo, HEAD
+* until something is added to it by `git add`
+* the _add_ is not really an add, it's copy
+* so a file gets rewritten from its repo version to its working area version
+* git sees it's modified so it says "I will add it to the next commit"
+* if it's not modified then there's nothing to commit
+* removing a file from a staging area means that git does't see any changes between staging and repo - to do that, files must be synced from repo to staging and this is what `git reset` does
+* key take-away: git decides what to commit based on the difference between STAGING and REPO.
+*Not* based on the difference between WORKING-STAGING.
+
 #### Commit with adding all files
 
 to-do: Is it really all files?
