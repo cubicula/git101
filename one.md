@@ -107,9 +107,6 @@ _(not sure what it does in the staging area)_
 
 ## Is everything pushed back to remote repo? (=do I have a backup?)
 `git diff origin master` ... changes between working area and remote repo.
-
 Non-empty result means there are local changes missing from remote repo.
-
 These changes could be already committed locally, so all that is needed is to push them.
-
-
+Run `git diff HEAD` to see if they need to be committed first.
