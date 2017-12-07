@@ -42,6 +42,9 @@ Notice it doesn't delete the commits of that branch, just the pointer.
 Explained here: http://365git.tumblr.com/post/3464927214/getting-a-diff-between-the-working-tree-and-other
 
 ## Committing
+#### Remove a file from staging area
+`git reset <filename>`
+
 #### Commit with adding all files
 
 to-do: Is it really all files?
@@ -94,3 +97,4 @@ Go back to the last checked-in version of a single file
 `git checkout HEAD -- <filename>` ... rewrite file in the working directory 
 
 _(not sure what it does in the staging area)_
+
