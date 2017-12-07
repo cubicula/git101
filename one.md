@@ -11,8 +11,24 @@ to-do: What about `git clone`?
 
 `git push -u origin master`
 
+#### Create a branch
+`git branch <branch name>`, `git branch cleanup`
+#### Switch to branch
+`git checkout <branch name>`, `git checkout cleanup`
 #### Delete a branch
 `git branch -d <branch_name>`
+
+## Delete and stage deleted files
+`git rm '*A.txt`
+
+!!! works on subdirs too !!!
+
+## Merge
+1. go to the branch _into which_ you want to merge
+2. `git merge <branch name to marge from>`
+
+## What's more recent, local files or repo??
+
 
 Notice it doesn't delete the commits of that branch, just the pointer.
 
@@ -44,6 +60,8 @@ Explained here: http://365git.tumblr.com/post/3464927214/getting-a-diff-between-
 ## Committing
 #### Remove a file from staging area
 `git reset <filename>`
+
+Example `git reset octofamily/octodog.txt`
 
 #### Commit with adding all files
 
@@ -98,6 +116,8 @@ Go back to the last checked-in version of a single file
 
 `git checkout HEAD -- <filename>` ... rewrite file in the working directory 
 
+`git checkout HEAD -- octocat.txt`
+
 _(not sure what it does in the staging area)_
 
 ## Overwrite local files with last commit
@@ -107,6 +127,9 @@ _(not sure what it does in the staging area)_
 
 ## Is everything pushed back to remote repo? (=do I have a backup?)
 `git diff origin master` ... changes between working area and remote repo.
+
 Non-empty result means there are local changes missing from remote repo.
+
 These changes could be already committed locally, so all that is needed is to push them.
+
 Run `git diff HEAD` to see if they need to be committed first.
