@@ -1,1 +1,2 @@
 test1
+new line in test1.txt
