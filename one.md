@@ -58,6 +58,8 @@ Idea - run diff before and after each step to verify it's doing the expected thi
 ##### working-repo
 `git diff HEAD` ... is working area different from repo? Run this at the end of the sequence to see nothing is returned and they are in sync.
 
+`Will this show differences for all files or just the ones that are tracked?`
+
 ---
 ##### working-staging
 `git status`
