@@ -87,3 +87,10 @@ Idea - run diff before and after each step to verify it's doing the expected thi
 `git diff origin/master` ... must show nothing, so we know remote is synced with local
 
 ---
+## Redoing things
+### Single file roll-back
+Go back to the last checked-in version of a single file
+
+`git checkout HEAD -- <filename>` ... rewrite file in the working directory 
+
+_(not sure what it does in the staging area)_
