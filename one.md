@@ -1,7 +1,17 @@
 # Viewing
 
-## Show files in repo without _checking_ them out
+### Show files in repo without _checking_ them out
 `git show HEAD:<filename>`
+
+### Show commits
+
+`git log -2` ... last two commits
+
+`git log --stat` ... which files changes and the number of changes in them
+
+`git log --pretty=oneline`, `pretty=short / full / fuller`
+
+`git log --since=2.weeks` ... since last 2 weeks
 
 # Setup a repo
 * Create and go to your project folder
@@ -68,6 +78,13 @@ Explained here: http://365git.tumblr.com/post/3464927214/getting-a-diff-between-
 `git <branch1> <branch2> <filename>`
 
 Ex.: `git diff master dev file1.txt`
+
+## Undoing
+#### Remove a file from staging area
+`git reset <filename>`
+
+Example `git reset octofamily/octodog.txt`
+
 
 ## Committing
 #### Remove a file from staging area
