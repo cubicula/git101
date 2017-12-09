@@ -39,6 +39,8 @@ Notice it doesn't delete the commits of that branch, just the pointer.
 
 ## Changes
 
+To use a custom diff viewer, use `git difftool ...` instead of `git diff ...`
+
 ### See changes between workspace and staging area.
 (tentative)
 `git diff`
@@ -61,6 +63,11 @@ Notice it doesn't delete the commits of that branch, just the pointer.
 `git diff HEAD`
 
 Explained here: http://365git.tumblr.com/post/3464927214/getting-a-diff-between-the-working-tree-and-other
+
+#### Difference in a single *file* between two *braches*
+`git <branch1> <branch2> <filename>`
+
+Ex.: `git diff master dev file1.txt`
 
 ## Committing
 #### Remove a file from staging area
