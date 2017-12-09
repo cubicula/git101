@@ -1,3 +1,8 @@
+# Viewing
+
+## Show files in repo without _checking_ them out
+`git show HEAD:<filename>`
+
 # Setup a repo
 * Create and go to your project folder
 
