@@ -104,6 +104,10 @@ Example `git reset octofamily/octodog.txt`
 `git commit -a -m "<commit message>"`
 to-do: Is it really all files? Or just tracked ones? In that case untracked files would not get added with `git commit -a`
 
+#### Correct, amend a commit
+`git add <file>` ... this is needed
+`git commit --amend -m "<commit message>"`
+
 ### A commit sequence with checking
 Idea - run diff before and after each step to verify it's doing the expected thing
 
@@ -160,7 +164,7 @@ _(not sure what it does in the staging area)_
 ## Recover  deleted local file
 
 ## Is everything pushed back to remote repo? (=do I have a backup?)
-`git diff origin master` ... changes between working area and remote repo.
+`git diff origin/master` ... changes between working area and remote repo.
 
 Non-empty result means there are local changes missing from remote repo.
 
