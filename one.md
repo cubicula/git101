@@ -51,13 +51,16 @@ to-do: What about `git clone`?
 
 Notice it doesn't delete the commits of that branch, just the pointer.
 
-## Changes
+# View changes
 
 To use a custom diff viewer, use `git difftool ...` instead of `git diff ...`
 
 ### See changes between workspace and staging area.
 (tentative)
 `git diff`
+
+### Show only which files have changed
+`git diff --name-only`
 
 #### For a specific file only
 `git diff <filename>`
@@ -155,8 +158,6 @@ _(not sure what it does in the staging area)_
 
 ## Overwrite local files with last commit
 ## Recover  deleted local file
-## Show files which changed
-`git diff --name-only`
 
 ## Is everything pushed back to remote repo? (=do I have a backup?)
 `git diff origin master` ... changes between working area and remote repo.
