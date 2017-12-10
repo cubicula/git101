@@ -101,9 +101,8 @@ Example `git reset octofamily/octodog.txt`
 
 #### Commit with adding all files
 
-to-do: Is it really all files?
-
 `git commit -a -m "<commit message>"`
+to-do: Is it really all files? Or just tracked ones? In that case untracked files would not get added with `git commit -a`
 
 ### A commit sequence with checking
 Idea - run diff before and after each step to verify it's doing the expected thing
@@ -157,6 +156,7 @@ Go back to the last checked-in version of a single file
 _(not sure what it does in the staging area)_
 
 ## Overwrite local files with last commit
+
 ## Recover  deleted local file
 
 ## Is everything pushed back to remote repo? (=do I have a backup?)
