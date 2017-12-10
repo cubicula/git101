@@ -104,6 +104,10 @@ Example `git reset octofamily/octodog.txt`
 `git commit -a -m "<commit message>"`
 to-do: Is it really all files? Or just tracked ones? In that case untracked files would not get added with `git commit -a`
 
+#### Correct, amend a commit
+`git add <file>` ... this is needed
+`git commit --amend -m "<commit message>"`
+
 ### A commit sequence with checking
 Idea - run diff before and after each step to verify it's doing the expected thing
 
