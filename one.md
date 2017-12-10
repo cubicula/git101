@@ -2,7 +2,9 @@
 
 ### Show files in repo without _checking_ them out
 `git show HEAD:<filename>`
+
 `git show master:<filename>` ... in branch _master_
+
 `git show origin/master:<filename>` ... in remote repo _origin_, branch _master_
 
 ### Show commits
