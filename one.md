@@ -53,6 +53,9 @@ Notice it doesn't delete the commits of that branch, just the pointer.
 
 # View changes
 
+### Local files (unstaged or outside git repo)
+`git diff --no-index -- <file1> <file2>`
+
 To use a custom diff viewer, use `git difftool ...` instead of `git diff ...`
 
 ### See changes between workspace and staging area.
