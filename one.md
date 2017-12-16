@@ -1,5 +1,8 @@
 # Viewing
 
+### View files in staging area
+`git ls-files`
+
 ### Show files in repo without _checking_ them out
 `git show HEAD:<filename>`
 
@@ -174,3 +177,11 @@ Non-empty result means there are local changes missing from remote repo.
 These changes could be already committed locally, so all that is needed is to push them.
 
 Run `git diff HEAD` to see if they need to be committed first.
+
+## Copy file from another branch
+From branch Bsource destination branch Bdest:
+``git checkout <Bsource> <file_to_copy>``
+
+This really only copies one file and doesn't delete the other files in the destination branch.
+
+*It doesn't switch branch!* 
