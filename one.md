@@ -16,6 +16,8 @@
 
 `git log --stat` ... which files changes and the number of changes in them
 
+`git log --name-status` ... show which files were (A)dded, (M)odified
+
 `git log --pretty=oneline`, `pretty=oneline / short / full / fuller`
 
 `git log  --pretty=oneline --stat -- "*.csv" ".txt"` ... shows commit message and which _csv_ and _txt_ files changed
