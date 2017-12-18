@@ -18,7 +18,7 @@
 
 `git log --pretty=oneline`, `pretty=oneline / short / full / fuller`
 
-`git log  --pretty=oneline --stat -- "*.csv"` ... shows commit message and which _csv_ files changed
+`git log  --pretty=oneline --stat -- "*.csv" ".txt"` ... shows commit message and which _csv_ and _txt_ files changed
 
 `git log --since=2.weeks` ... since last 2 weeks
 
