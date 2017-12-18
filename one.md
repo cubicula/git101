@@ -10,13 +10,15 @@
 
 `git show origin/master:<filename>` ... in remote repo _origin_, branch _master_
 
-### Show commits
+### Show commits with _log_
 
 `git log -2` ... last two commits
 
 `git log --stat` ... which files changes and the number of changes in them
 
-`git log --pretty=oneline`, `pretty=short / full / fuller`
+`git log --pretty=oneline`, `pretty=oneline / short / full / fuller`
+
+`git log  --pretty=oneline --stat -- "*.csv"` ... shows commit message and which _csv_ files changed
 
 `git log --since=2.weeks` ... since last 2 weeks
 
