@@ -24,6 +24,12 @@
 
 `git log --since=2.weeks` ... since last 2 weeks
 
+Good combos:
+
+`git log -5 --pretty=oneline --name-status`
+
+`git log -5 --pretty=oneline --stat`
+
 # Setup a repo
 * Create and go to your project folder
 
