@@ -102,6 +102,13 @@ Ex.: `git diff master dev file1.txt`
 
 Example `git reset octofamily/octodog.txt`
 
+#### Cancel local changes, rewrite them with originals in repo
+`git checkout HEAD -- <file>` ... this will copy <file> to index as well as working directory
+  
+!
+
+This will only copy <file> from index to working directory: 'git checkout -- <file>', so previous _adds_ to index will get copied back to working dir. and you will not get the original.
+
 
 ## Committing
 #### Remove a file from staging area
