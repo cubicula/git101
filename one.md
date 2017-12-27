@@ -1,16 +1,16 @@
 # Viewing
 
-### View files in staging area
+## View files in staging area
 `git ls-files`
 
-### Show files in repo without _checking_ them out
+## Show files in repo without _checking_ them out
 `git show HEAD:<filename>`
 
 `git show master:<filename>` ... in branch _master_
 
 `git show origin/master:<filename>` ... in remote repo _origin_, branch _master_
 
-### Show commits with _log_
+## Show commits with _log_
 
 `git log -2` ... last two commits
 
