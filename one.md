@@ -98,7 +98,7 @@ Ex.: `git diff master dev file1.txt`
 
 ## Undoing
 #### Remove a file from staging area
-`git reset <filename>`
+`git reset -- <filename>`
 
 Example `git reset octofamily/octodog.txt`
 
@@ -109,6 +109,18 @@ Example `git reset octofamily/octodog.txt`
 
 This will only copy <file> from index to working directory: 'git checkout -- <file>', so previous _adds_ to index will get copied back to working dir. and you will not get the original.
 
+#### Undo a commit
+\# on branch _master_
+`git reset HEAD^`
+
+What this does:
+1. moves master pointer to one commit back
+2. moves HEAD to point there too(or it just keeps pointing at master, I don't know)
+3. Copies files from ref to index, but not to working directory
+	Tentative: To copy to working directory, do now either `git reset ... --hard' or 'git checkout HEAD'
+
+(Also - `git amend`)
+(Also - `git revert`)
 
 ## Committing
 #### Remove a file from staging area

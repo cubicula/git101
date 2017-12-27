@@ -4,6 +4,18 @@
 
 Notice it doesn't delete the commits of that branch, just the pointer.
 
+## Comparing _checkout_ and _reset_
+Both _checkout_ and _reset_ do move HEAD.
+
+_checkout_ *doesn't* moves branch pointer, it just moves HEAD to it
+
+...
+
+_reset_ *does* move branch pointer
+
+Note: if `-- <file>` is added to either of the commands, they don't move HEAD. That's how the commands are similar.
+
+
 ## Committing
 #### Remove a file from staging area
 `git reset <filename>`
