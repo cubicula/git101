@@ -119,6 +119,7 @@ What this does:
 	Tentative: To copy to working directory, do now either `git reset ... --hard' or 'git checkout HEAD'
 
 (Also - `git amend`)
+
 (Also - `git revert`)
 
 ## Committing
@@ -207,3 +208,13 @@ From branch Bsource destination branch Bdest:
 This really only copies one file and doesn't delete the other files in the destination branch.
 
 *It doesn't switch branch!* 
+
+## Move branch
+1. `git checkout master` ... must be on the branch which is to be moved
+2. `git reset <commit>` ... e.g., `git reset HEAD^`
+
+or
+
+(tentative)
+`git branch -f master <commit>` ... doesn't require to be first on master
+

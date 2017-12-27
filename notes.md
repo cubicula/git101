@@ -4,6 +4,14 @@
 
 Notice it doesn't delete the commits of that branch, just the pointer.
 
+## reset
+Which banch will this command move?
+`git reset HEAD^`
+
+Answer: the branch on which we are before this command is executed.
+
+E.g., we are on master, so master will move one commit back.
+
 ## Comparing _checkout_ and _reset_
 Both _checkout_ and _reset_ do move HEAD.
 
@@ -15,6 +23,16 @@ _reset_ *does* move branch pointer
 
 Note: if `-- <file>` is added to either of the commands, they don't move HEAD. That's how the commands are similar.
 
+## Moving a branch
+I've come across this command 
+```
+git branch -f master HEAD^3
+```
+which moves master to a commit from its past.
+
+Why not use `git reset`? How is it different?
+
+(Maybe you don't have to be _on_ the branch you want to move.)
 
 ## Committing
 #### Remove a file from staging area
