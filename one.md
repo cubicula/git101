@@ -43,13 +43,6 @@ to-do: What about `git clone`?
 
 `git push -u origin master`
 
-#### Create a branch
-`git branch <branch name>`, `git branch cleanup`
-#### Switch to branch
-`git checkout <branch name>`, `git checkout cleanup`
-#### Delete a branch
-`git branch -d <branch_name>`
-
 ## Delete and stage deleted files
 `git rm '*A.txt`
 
@@ -214,6 +207,18 @@ From branch Bsource destination branch Bdest:
 This really only copies one file and doesn't delete the other files in the destination branch.
 
 *It doesn't switch branch!* 
+
+# Branching
+### Create a branch
+\# on current commit:
+`git branch <branch name>`, `git branch cleanup`
+\# on a different commit:
+`git branch <branch name> <commit>`, `git branch bugFix HEAD^2^1`
+### Switch to branch
+`git checkout <branch name>`, `git checkout cleanup`
+### Delete a branch
+`git branch -d <branch_name>`
+
 
 ## Move branch
 1. `git checkout master` ... must be on the branch which is to be moved
