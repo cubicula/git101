@@ -224,3 +224,8 @@ or
 (tentative)
 `git branch -f master <commit>` ... doesn't require to be first on master
 
+## Tagging
+`git tag <tagname> <commit>`
+
+`git describe <commit|branch>` ... the closest past tag, how many hops away
+
