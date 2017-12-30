@@ -234,3 +234,19 @@ or
 
 `git describe <commit|branch>` ... the closest past tag, how many hops away
 
+# Remote braches
+## Show remote branches
+`git ls-remote`
+
+`git remote show origin` ... more detailes about _origin_ remote
+
+### Show tracking
+`git branch -vv`
+
+## Setup tracking of remote branch
+`git checkout --track origin/serverfix`
+
+or
+
+`git checkout -b <branch> <remote>/<branch>`
+
