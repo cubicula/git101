@@ -12,6 +12,8 @@
 
 ## Show commits with _log_
 
+`git log --oneline`
+
 `git log -2` ... last two commits
 
 `git log --stat` ... which files changes and the number of changes in them
@@ -29,6 +31,13 @@ Good combos:
 `git log -5 --pretty=oneline --name-status`
 
 `git log -5 --pretty=oneline --stat`
+
+Between branches:
+
+`git log master..feature` ... show commits which are in branch _feature_ but aren't in branch _master_
+
+Between commits:
+`git log master^^...master` (notice three dots)
 
 ## Setup a repo
 * Create and go to your project folder
