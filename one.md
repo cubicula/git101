@@ -1,7 +1,7 @@
 # Viewing
 
 ## View files in staging area
-`git ls-files`
+`git ls-files` #This shows the _tracked_ files
 
 ## Show files in repo without _checking_ them out
 `git show HEAD:<filename>`
@@ -30,7 +30,7 @@ Good combos:
 
 `git log -5 --pretty=oneline --stat`
 
-# Setup a repo
+## Setup a repo
 * Create and go to your project folder
 
 `git init`
@@ -43,71 +43,87 @@ to-do: What about `git clone`?
 
 `git push -u origin master`
 
-## Delete and stage deleted files
+## Manipulate files
+### Remove file
+
+```
+git rm <file>
+git commit
+```
+
 `git rm '*A.txt`
 
 !!! works on subdirs too !!!
+### Move file
 
-## Merge
+```
+git mv <filename1> <filename2> # also stages it
+```
+
+
+## Merging, merge
 1. go to the branch _into which_ you want to merge
 2. `git merge <branch name to marge from>`
 
-## What's more recent, local files or repo??
+### What's more recent, local files or repo??
 
 
 Notice it doesn't delete the commits of that branch, just the pointer.
 
-# View changes
+### View changes
 
-### Local files (unstaged or outside git repo)
+#### Local files (unstaged or outside git repo)
 `git diff --no-index -- <file1> <file2>`
 
 To use a custom diff viewer, use `git difftool ...` instead of `git diff ...`
 
-### See changes between workspace and staging area.
+#### See changes between workspace and staging area.
 (tentative)
 `git diff`
 
-### Show only which files have changed
+#### Show only which files have changed
 `git diff --name-only`
 
-#### For a specific file only
+##### For a specific file only
 `git diff <filename>`
 
-### How to get differences between local repo and remote repo?
+#### How to get differences between local repo and remote repo?
 `git diff <local branch> <remote>/<remote branch>`
 
 `git diff master origin/master`
 
-#### Difference between *staging* area and *working area*
+##### Difference between *staging* area and *working area*
 `git diff`
 
-#### Difference between HEAD and staging area
+##### Difference between HEAD and staging area
 `git diff --cached`
 
-#### Difference between HEAD and working area
+##### Difference between HEAD and working area
 `git diff HEAD`
 
 Explained here: http://365git.tumblr.com/post/3464927214/getting-a-diff-between-the-working-tree-and-other
 
-#### Difference in a single *file* between two *braches*
+##### Difference in a single *file* between two *braches*
 `git <branch1> <branch2> <filename>`
 
 Ex.: `git diff master dev file1.txt`
 
 ## Undoing
-#### Remove a file from staging area
+### Remove a file from staging area, unstage, unadd
 `git reset -- <filename>`
+
+### Untrack file (leave it in working area)
+`git rm --cached <file>`
 
 Example `git reset octofamily/octodog.txt`
 
-#### Cancel local changes, rewrite them with originals in repo
+### Cancel local changes, rewrite them with originals in repo
 `git checkout HEAD -- <file>` ... this will copy <file> to index as well as working directory
   
 !
 This will only copy <file> from index to working directory: 'git checkout -- <file>', so previous _adds_ to index will get copied back to working dir. and you will not get the original.
 
-#### Undo a commit
+### Undo a commit
 \# on branch _master_
 `git reset HEAD^`
 
@@ -187,18 +203,9 @@ Go back to the last checked-in version of a single file
 
 _(not sure what it does in the staging area)_
 
-## Overwrite local files with last commit
+### Overwrite local files with last commit
 
-## Recover  deleted local file
-
-## Is everything pushed back to remote repo? (=do I have a backup?)
-`git diff origin/master` ... changes between working area and remote repo.
-
-Non-empty result means there are local changes missing from remote repo.
-
-These changes could be already committed locally, so all that is needed is to push them.
-
-Run `git diff HEAD` to see if they need to be committed first.
+### Recover  deleted local file
 
 ## Copy file from another branch
 From branch Bsource destination branch Bdest:
@@ -220,7 +227,7 @@ This really only copies one file and doesn't delete the other files in the desti
 `git branch -d <branch_name>`
 
 
-## Move branch
+### Move branch
 1. `git checkout master` ... must be on the branch which is to be moved
 2. `git reset <commit>` ... e.g., `git reset HEAD^`
 
@@ -229,13 +236,19 @@ or
 (tentative)
 `git branch -f master <commit>` ... doesn't require to be first on master
 
-## Tagging
-`git tag <tagname> <commit>`
 
-`git describe <commit|branch>` ... the closest past tag, how many hops away
 
-# Remote braches
-## Show remote branches
+## Remote branches
+
+### Is everything pushed back to remote repo? (=do I have a backup?)
+`git diff origin/master` ... changes between working area and remote repo.
+
+Non-empty result means there are local changes missing from remote repo.
+
+These changes could be already committed locally, so all that is needed is to push them.
+
+Run `git diff HEAD` to see if they need to be committed first.
+### Show remote branches
 `git ls-remote`
 
 `git remote show origin` ... more detailes about _origin_ remote
@@ -243,10 +256,15 @@ or
 ### Show tracking
 `git branch -vv`
 
-## Setup tracking of remote branch
+### Setup tracking of remote branch
 `git checkout --track origin/serverfix`
 
 or
 
 `git checkout -b <branch> <remote>/<branch>`
+
+## Tagging
+`git tag <tagname> <commit>`
+
+`git describe <commit|branch>` ... the closest past tag, how many hops away
 
