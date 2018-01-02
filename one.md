@@ -286,6 +286,18 @@ git checkout <local_branch>
 git push origin <local_branch>:<remote_branch_name>
 ```
 
+### Setup upstream branch and tracking branch
+#### Same names
+
+```
+git push --set-upstream origin test_branch
+```
+### Different names
+
+```
+git push --set-upstream origin test_branch:test_branch_different_name_than_local
+```
+
 ## Tagging
 `git tag <tagname> <commit>`
 
