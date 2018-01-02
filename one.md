@@ -266,11 +266,25 @@ Run `git diff HEAD` to see if they need to be committed first.
 `git branch -vv`
 
 ### Setup tracking of remote branch
-`git checkout --track origin/serverfix`
+`git checkout -b <branch> <remote>/<branch>`
 
 or
 
-`git checkout -b <branch> <remote>/<branch>`
+`git checkout --track origin/serverfix`
+
+## Push local branch to remote repo
+#### Same name locally and remotely
+
+```
+git checkout <local_branch>
+git push origin <local_branch>
+```
+### Different name locally and remotely
+
+```
+git checkout <local_branch>
+git push origin <local_branch>:<remote_branch_name>
+```
 
 ## Tagging
 `git tag <tagname> <commit>`
