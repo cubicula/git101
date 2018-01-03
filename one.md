@@ -272,14 +272,14 @@ or
 
 `git checkout --track origin/serverfix`
 
-## Push local branch to remote repo
+### Push local branch to remote repo
 #### Same name locally and remotely
 
 ```
 git checkout <local_branch>
 git push origin <local_branch>
 ```
-### Different name locally and remotely
+#### Different name locally and remotely
 
 ```
 git checkout <local_branch>
