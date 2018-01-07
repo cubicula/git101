@@ -1,4 +1,6 @@
 
+# Notes on understanding basic git concepts
+
 #### Delete a branch
 `git branch -d <branch_name>`
 
@@ -243,3 +245,35 @@ f appears in the working directory of B2. Why? It wasn't added to B1, so it wasn
 This may be dangerous of the code depends on the presence of a file.
 
 Always do git status to see untracked files and consider whether they affect the program.
+
+## Tracking, branch tracking
+
+## Committing
+Note:
+- your index gets committed, not your working tree!!! (This has many implications.)
+- you get useful stuff stored with commit - timestam, author, and the whole history - because the new commit has a pointer to its predecessors
+- there are other commands apart from `git commit` that _create_ commits - `merge`, `pull`, `push`
+
+## Repo
+Note:
+- remote repo is a _different_ repo than the local repo even if they are linked. There may be branches in the local repo that aren't in the remote repo.
+- Repo is a graph - one graph. Local repo is one graph and remote repo is another graph. They may be the same graphs (I guess) but thay may be different at times, so they are two graphs, hence two repos.
+
+## Branches
+Note:
+- the most important thing is that they are just pointers to commits
+- the second most important thing is that they move with commits
+  
+## _HEAD_
+Note:
+- OK, _HEAD_ points to the currently checked-out commit or branch, but what does it _mean_?
+	- it means that the working tree _has_ the copy of the tree of the commit _HEAD_ points to - at least initially right after the commit
+		(exceptions: some untracked files may be in the working tree that have nothing to do with the commit)
+	- it also sets context for git commands, e.g., `git status` shows the status of the branch _HEAD_ points to. Or `git push` pushes the checked-out branch.
+	
+## Tags
+One way to think of tags is that they are pointers that point to the non-leaf (not-the-last-one) commits, unlike branches typically do. 
+
+The most important thing about tags is that they do not move with commits as opposed to branches which do move with commits. So a tag is stuck on a single commit and never moves from that commit. Unless one deletes the tag and creates it elsewhere.
+
+I don't understand how to track changes in tags locations. If a tag marks a release for example, it should be tracked what happened to the tag in the past.
