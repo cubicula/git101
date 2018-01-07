@@ -231,3 +231,15 @@ To copy from staging to working, do `git checkout -- <filename>` but I don't kno
 !!! will it delete files in working directory if the _dev_ branch doesn't have them????
 
 - try this out
+
+
+## Caveats
+### Smuggling a file between branches
+1. Create file f in branch B1
+2. Checkout banch B2
+
+f appears in the working directory of B2. Why? It wasn't added to B1, so it wasn't committed to B1, so the checkout to B2 doesn't delete it, because it's not tracked by git, git doesn't care about the file.
+
+This may be dangerous of the code depends on the presence of a file.
+
+Always do git status to see untracked files and consider whether they affect the program.
