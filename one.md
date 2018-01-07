@@ -132,6 +132,13 @@ Example `git reset octofamily/octodog.txt`
 !
 This will only copy <file> from index to working directory: 'git checkout -- <file>', so previous _adds_ to index will get copied back to working dir. and you will not get the original.
 
+From https://stackoverflow.com/questions/10228760/fix-a-git-detached-head:
+"Next time you have changed a file and want to restore it to the state it is in the index, don't delete the file first, just do"
+
+`git checkout -- path/to/foo`
+
+"This will restore the file foo to the state it is in the index."
+
 ### Undo a commit
 \# on branch _master_
 `git reset HEAD^`
