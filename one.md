@@ -1,3 +1,14 @@
+# General
+## Dry run
+`git <command> --dry-run`, e.g., `git commit -a -m "Add fature 1" --dry-run`
+
+# Setup
+## Ignore
+`.gitignore` file
+
+`*.exe` ... all \*.exe files
+`dir1/` ... directory _dir1_
+
 # Viewing
 
 ## View files in staging area
