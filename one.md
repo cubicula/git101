@@ -66,6 +66,12 @@ git rm <file>
 git commit
 ```
 
+But this will delete the file from working directory too!
+
+To remove a file from repo and index and leave it in the working directory, do
+
+`git rm --cached <file>`
+
 `git rm '*A.txt`
 
 !!! works on subdirs too !!!
