@@ -7,7 +7,11 @@
 `.gitignore` file
 
 `*.exe` ... all \*.exe files
+
 `dir1/` ... directory _dir1_
+
+## Presentation of conflicts
+'git config merge.conflictstyle diff3'
 
 # Viewing
 
@@ -75,6 +79,10 @@ git mv <filename1> <filename2> # also stages it
 ## Merging, merge
 1. go to the branch _into which_ you want to merge
 2. `git merge <branch name to marge from>`
+
+### _diff3_
+`git checkout --conflict=diff3 file.txt` ... to see code how it was before changes in branches about to be merges
+
 
 ### What's more recent, local files or repo??
 
