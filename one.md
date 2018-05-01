@@ -18,12 +18,15 @@
 ## View files in staging area
 `git ls-files` #This shows the _tracked_ files
 
-## Show files in repo without _checking_ them out
+## Show individual files in repo without _checking_ them out
 `git show HEAD:<filename>`
 
 `git show master:<filename>` ... in branch _master_
 
 `git show origin/master:<filename>` ... in remote repo _origin_, branch _master_
+
+## Show _all_ files in a commit
+`git ls-tree --name-only -r HEAD`
 
 ## Show commits with _log_
 
