@@ -284,7 +284,11 @@ These changes could be already committed locally, so all that is needed is to pu
 
 Run `git diff HEAD` to see if they need to be committed first.
 ### Show remote branches
-`git ls-remote`
+`git ls-remote` ... shows references in _remote_ repository
+
+and also
+
+`git branch -r` ... shows remote-tracking branches
 
 `git remote show origin` ... more detailes about _origin_ remote
 
@@ -298,8 +302,26 @@ or
 
 `git checkout -b <branch> <remote>/<branch>`
 
+#### Setup tracking of remote branch under a different local name
+e.g.
+
+`git checkout --track -b simple-name origin/some-long-complex-name`
+
+## Assign remote-tracking branch to a local branch
+`git branch branch_name --set-upstream-to remote/branch_name`
+
+E.g.,
+
+## Push
+Push in case of different name
+
+`git push <remote> local-name:remote-name`
+
 ## Tagging
 `git tag <tagname> <commit>`
 
 `git describe <commit|branch>` ... the closest past tag, how many hops away
+
+## Config
+`git config list` ... show Git config
 
